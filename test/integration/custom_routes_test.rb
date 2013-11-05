@@ -16,4 +16,9 @@ test "that /logout route opens the login page" do
 	get '/register'
 	assert_response :success
 end
+
+test "that a profile page is available" do #this test goes in custom routing
+	get '/jimhoskins'
+	assert_response :success
+end
 end

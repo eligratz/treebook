@@ -2,6 +2,12 @@ eli:
  first_name: "Eli"
  last_name: "Gratz"
  email: "ergratz@gmail.com"
- profile_name: eligratz
+ profile_name: "eligratz"
  # password: "StrongPassword"
  # password_confirmation: "StrongPassword"
+
+jim:
+ first_name: "Jim"
+ last_name: "Hoskins"
+ email: "Jim@treehouse.com"
+ profile_name: "jimhoskins"
