@@ -6,7 +6,12 @@
 
 <% @statuses.each do |status|%>
 <div class="status">
-  <strong>Name is fucked<strong>
+	<div class="row">
+	<div class="span1">
+		Fucking Avatars
+	</div>
+	<div class="span7"
+  <strong> fucked-user-name <strong>
   <p><%= status.content %></p>  
   <div class="meta">
     <%= link_to time_ago_in_words(status.created_at) + " ago", status %> 
@@ -15,6 +20,8 @@
       <%= link_to "Delete", status, method: :delete, data: { confirm: "Really?"} %>
     </span>
   </div>
+</div>
+</div>
 </div>
 
 <% end %>
