@@ -24,7 +24,18 @@ class StatusesControllerTest < ActionController::TestCase
 
   end
 
-  test "should create status" do
+
+# This was added to as an additional test, not a scaffold test
+  test "should be logged in to post a status" do 
+    post :create, status: {content: "Hello"}
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+
+  end
+
+
+  test "should create status when logged in" do
+    sign_in users(:eli)
     assert_difference('Status.count') do
       post :create, status: { content: @status.content }
     end
@@ -37,7 +48,10 @@ class StatusesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+
+
   test "should get edit" do
+    sign_in users(:eli)
     get :edit, id: @status
     assert_response :success
   end
